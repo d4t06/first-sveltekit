@@ -32,7 +32,7 @@
 
 <div
 	style="touch-action: none;"
-	class="fixed right-2 top-0 [&_button]:block [&_button]:font-bold"
+	class="fixed right-2 top-0 [&_button]:block [&_button]:p-0.5"
 >
 	{#each letters as letter}
 		<button onclick={() => handleClick(letter)}>{letter}</button>

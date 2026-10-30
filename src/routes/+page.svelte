@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Lyric from "./_components/lyric.svelte";
+	import ShowActive from "./_components/show-active.svelte";
 	import SideScroll from "./_components/side-scroll.svelte";
 	import SongItem from "./_components/song-item.svelte";
 
@@ -21,9 +23,8 @@
 </script>
 
 <svelte:head>
-	<title>{currentSong?.name || "hehe"}</title> 
-	</svelte:head>
-
+	<title>{currentSong?.name || "hehe"}</title>
+</svelte:head>
 
 <audio
 	class="sticky top-1"
@@ -41,8 +42,15 @@
 
 <div class="pt-10 space-y-2 pl-2 pb-[50%]">
 	{#each data.songs as song, i (song.id)}
-		<SongItem setSong={() => setSong(i)} {song} />
+		<SongItem
+			active={currentSong?.id == song.id}
+			setSong={() => setSong(i)}
+			{song}
+		/>
 	{/each}
 </div>
 
 <SideScroll />
+
+<ShowActive />
+<Lyric {currentSong} />

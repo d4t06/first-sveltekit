@@ -68,9 +68,7 @@ declare global {
 	};
 
 	type SongLyric = {
-		id: number | null;
-		song_id: number;
-		base_lyric: string;
+		base: string;
 		lyrics: string;
 	};
 
