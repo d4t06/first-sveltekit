@@ -27,7 +27,7 @@
 		</div>
 		<hr />
 
-		<div class="flex-grow overflow-auto max-h-[80vh]">
+		<div class="flex-grow overflow-auto max-h-[75vh]">
 			{@render children?.()}
 		</div>
 	</div>
